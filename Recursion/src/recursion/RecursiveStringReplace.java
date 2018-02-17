@@ -16,10 +16,18 @@ public class RecursiveStringReplace
 
         // IMPLEMENT THIS RECURSIVE METHOD
 //>>>>>>>>> ADDED CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>        
-
+    if(s.length() < 1){
+        return s;
+    }
+    
+    if(s.charAt(0) == from){
+        s = to + s.substring(1);
+    }
+    
+    return s.charAt(0) + replace(s.substring(1, s.length()), from, to);
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<        
 
-        return result;
+       
     }
 
 
